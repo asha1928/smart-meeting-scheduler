@@ -3,9 +3,9 @@ import calendar
 
 class MeetingScheduler:
     def _init_(self, working_hours=(9, 17), public_holidays=None):
-        self.working_hours = working_hours  # (Start Hour, End Hour)
+        self.working_hours = working_hours 
         self.public_holidays = public_holidays if public_holidays else []
-        self.schedule = {}  # Dictionary to store meetings for each user
+        self.schedule = {} 
     
     def is_working_day(self, date):
        
@@ -70,7 +70,7 @@ class MeetingScheduler:
 
 scheduler = MeetingScheduler(public_holidays=[datetime.date(2025, 1, 1)]) 
 
-print(scheduler.schedule_meeting("Alice", "2025-03-17", 10, 11)) 
-print(scheduler.schedule_meeting("Alice", "2025-03-17", 10, 12)) 
-print(scheduler.view_meetings("Alice")) 
-print(scheduler.available_slots("Alice", "2025-03-17")) 
+print(scheduler.schedule_meeting("Asha", "2025-03-17", 10, 11)) 
+print(scheduler.schedule_meeting("Asha", "2025-03-17", 10, 12)) 
+print(scheduler.view_meetings("Asha")) 
+print(scheduler.available_slots("Asha", "2025-03-17")) 
